@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="vi" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nguyễn Ngọc Tùng</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="effects.css">
+  </head>
+  <body>
+    <!-- Background wrapper: gradient + bubbles -->
+    <div class="bg-wrap" aria-hidden="true">
+      <div class="bg-gradient"></div>
+      <div class="bubbles">
+        <span class="bubble" style="left:8%; bottom:10%; width:90px; height:90px; --d:12s;"></span>
+        <span class="bubble" style="left:24%; bottom:18%; width:60px; height:60px; --d:9s;"></span>
+        <span class="bubble" style="left:44%; bottom:6%; width:120px; height:120px; --d:16s;"></span>
+        <span class="bubble" style="left:66%; bottom:20%; width:70px; height:70px; --d:11s;"></span>
+        <span class="bubble" style="left:82%; bottom:12%; width:48px; height:48px; --d:8s;"></span>
+      </div>
+    </div>
+
+    <div class="app-layout">
+      <!-- Sidebar -->
+      <aside class="sidebar" aria-label="Điều hướng chính">
+        <nav>
+          <ul class="side-nav">
+            <li><a class="side-link" href="#personal-info"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg><span>Thông tin</span></a></li>
+            <li><a class="side-link" href="#profession"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4zM4 10h10v2H4zM4 14h16v2H4z"/></svg><span>Nghề</span></a></li>
+            <li><a class="side-link" href="#skills"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zm0 7.5L5 9.1v5.4L12 17l7-2.5V9.1L12 9.5z"/></svg><span>Kỹ năng</span></a></li>
+            <li><a class="side-link" href="#certs"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z"/></svg><span>Chứng chỉ</span></a></li>
+            <li><a class="side-link" href="#projects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg><span>Dự án</span></a></li>
+            <li><a class="side-link" href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8V7l-3 2-2-1-7 6 2 1 10-6zM3 6v12h18V8l-9 6L3 6z"/></svg><span>Liên hệ</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <button id="sidebarToggle" class="sidebar-toggle" aria-label="Mở menu">☰</button>
+
+      <main id="mainContent" class="vertical-profile" role="main">
+  <div class="profile-card">
+  <!-- Avatar: replace images/avatar.jpg with your file -->
+  <img class="avatar" src="/image/anh2.jpg">
+  <h1 class="profile-name">Nguyễn Ngọc Tùng</h1>
+
+        <p class="profile-desc">Tôi thích xây dựng giao diện tinh tế, tối giản và trải nghiệm mượt mà. Tôi làm việc với HTML, CSS và JavaScript để biến ý tưởng thành sản phẩm.</p>
+
+  <!-- Personal sections in a responsive grid -->
+  <div class="cards-grid">
+    <div class="card featured">
+      <section id="personal-info" class="section personal-info">
+        <h2>Thông tin cá nhân</h2>
+        <ul class="info-list">
+          <li><strong>Họ và tên:</strong> Nguyễn Ngọc Tùng</li>
+          <li><strong>Ngày sinh:</strong> 03/06/2005</li>
+          <li><strong>Trường:</strong> Đại học Giao Thông Vận Tải TP.HCM</li>
+          <li><strong>Ngành học:</strong> Công nghệ thông tin</li>
+        </ul>
+
+        <div class="image-grid" aria-hidden="false">
+          <img class="lightbox-img" loading="lazy" src="/image/anh1.jpg" alt="ảnh 1" />
+          <img class="lightbox-img" loading="lazy" src="/image/anh3.jpg" alt="ảnh 2" />
+          <img class="lightbox-img" loading="lazy" src="/image/anh4.jpg" alt="ảnh 3" />
+        </div>
+
+        <div class="hobbies">
+          <h3>Sở thích</h3>
+          <ul class="hobby-list">
+            <li>
+              <svg class="hobby-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+              <span>Làm việc nhóm</span>
+            </li>
+            <li>
+              <svg class="hobby-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 3H8c-1.1 0-2 .9-2 2v12l4-2 4 2V5c0-1.1-.9-2-2-2z"/></svg>
+              <span>Chơi các trò chơi thể thao</span>
+            </li>
+            <li>
+              <svg class="hobby-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2h12v2H6V2zm0 16h12v2H6v-2zM6 7h12v2H6V7zm0 5h12v2H6v-2z"/></svg>
+              <span>Đọc truyện và nghe nhạc</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+    <div class="card">
+      <section id="profession" class="section profession">
+        <h2>Thông tin nghề</h2>
+        <p>Nhà phát triển web chuyên Front-end, tập trung vào xây dựng giao diện người dùng tương tác, tối ưu hiệu năng và responsive.</p>
+      </section>
+    </div>
+
+    <div class="card">
+      <section id="skills" class="section skills">
+        <h2>Ngôn ngữ &amp; Kỹ năng</h2>
+        <p>Ngôn ngữ: Tiếng Việt, Tiếng Anh</p>
+        <p>Kỹ năng: HTML, CSS, JavaScript, Git</p>
+      </section>
+    </div>
+
+    <div class="card">
+      <section id="certs" class="section certs">
+        <h2>Chứng chỉ &amp; Giải thưởng</h2>
+        <p>Không có</p>
+      </section>
+    </div>
+
+    <div class="card">
+      <section class="section projects" id="projects">
+        <h2>Dự án đã và đang làm</h2>
+        <ul class="project-list">
+          <li>
+            <strong>Website cá nhân</strong>
+            <p>Một trang tĩnh để giới thiệu bản thân và dự án mẫu.</p>
+          </li>
+          <li>
+            <strong>Ứng dụng diệt tác vụ</strong>
+            <p>Ứng dụng giúp tắt các ứng dụng chạy nền để giải phóng RAM.</p>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="card">
+      <section class="section contact" id="contact">
+        <h2>Liên hệ</h2>
+        <ul class="info-list">
+          <li><strong>Email:</strong> tungpro030605@gmail.com</li>
+          <li><strong>Số điện thoại:</strong> 0325884142</li>
+        </ul>
+        <div class="profile-actions">
+          <a class="btn" href="mailto:tungpro030605@gmail.com">Gửi email</a>
+        </div>
+        <div class="social-links" aria-label="Mạng xã hội">
+          <a class="social-link" href="https://www.facebook.com/nguyen.tung.636153" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07c0 4.99 3.66 9.13 8.44 9.92v-7.03H7.9v-2.89h2.54V9.41c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.76-1.61 1.54v1.84h2.74l-.44 2.89h-2.3v7.03C18.34 21.2 22 17.06 22 12.07z"/></svg>
+          </a>
+          <a class="social-link" href="https://www.instagram.com/lucyfisrt/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.1A4.9 4.9 0 1 0 16.9 13 4.9 4.9 0 0 0 12 8.1zm6.5-.6a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1zM12 9.6A3.4 3.4 0 1 1 8.6 13 3.4 3.4 0 0 1 12 9.6z"/></svg>
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
