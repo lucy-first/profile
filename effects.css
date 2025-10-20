@@ -1,9 +1,9 @@
-/* Effects: dark gradient background + bubbles */
+/* Hiệu ứng: nền gradient tối + bong bóng trang trí */
 
 :root{
   --effect-dark-1: rgb(69, 72, 81);
   --bubble-default-d: 14s;
-  --bubble-x: 6vw; /* default horizontal drift */
+  --bubble-x: 6vw; 
   --bubble-blur: 10px;
   --bubble-glow: rgba(124,58,237,0.14);
 }
@@ -15,10 +15,9 @@
   radial-gradient(circle at 50% 50%, rgba(255,255,255,0.02), transparent 40%);
   filter: blur(56px) saturate(1.05); transform: translateZ(0);}
 
-/* Bubble common */
 .bubbles{position:absolute; inset:0}
 .bubble{position:absolute; bottom:-20vh; border-radius:50%;
-  /* colorful layered bubble with soft sheen */
+  /* bong bóng nhiều lớp, ánh sáng mềm */
   background:
     radial-gradient(circle at 28% 28%, rgba(255,255,255,0.9), rgba(255,255,255,0.06) 18%, transparent 36%),
     radial-gradient(circle at 66% 70%, rgba(124,58,237,0.18), rgba(13,71,161,0.08) 40%, transparent 60%);

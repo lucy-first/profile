@@ -4,47 +4,65 @@
     document.documentElement.classList.add('reduced-motion');
   }
 
-  // Sidebar toggle for small screens (minimal JS)
   document.addEventListener('DOMContentLoaded', ()=>{
-    const toggle = document.getElementById('sidebarToggle');
     const sidebar = document.querySelector('.sidebar');
-    if(toggle && sidebar){
-      toggle.addEventListener('click', ()=> sidebar.classList.toggle('open'));
-    }
-
-    // Close sidebar after clicking a link (mobile)
-    document.querySelectorAll('.side-link').forEach(a=>{
-      a.addEventListener('click', ()=>{ if(window.innerWidth <= 520) sidebar.classList.remove('open'); });
-    });
-
-    // Highlight active sidebar link while scrolling using IntersectionObserver
+  // Đánh dấu link sidebar đang active khi cuộn, dùng IntersectionObserver
     try{
       const sideLinks = Array.from(document.querySelectorAll('.side-link'));
       const sections = sideLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
       if(sections.length){
         const mapLink = new Map(sections.map(s => [s.id, document.querySelector(`.side-link[href="#${s.id}"]`)]));
+        // chọn phần hiển thị nhiều nhất trong mọi thay đổi và set active cho link tương ứng
+        let clickLock = false;
+        const LOCK_DURATION = 2000; // ms, thời gian giữ lock sau click
         const io = new IntersectionObserver((entries)=>{
-          entries.forEach(entry => {
-            const id = entry.target.id;
-            const link = mapLink.get(id);
-            if(!link) return;
-            if(entry.isIntersecting && entry.intersectionRatio > 0.45){
-              sideLinks.forEach(l=>l.classList.remove('active'));
-              link.classList.add('active');
-            }
-          });
-        }, { root: null, rootMargin: '0px', threshold: [0.45, 0.75] });
+          // lọc các mục đang hiển thị
+          if(clickLock) return; // nếu đang lock (vừa click) thì không override
+          const visible = entries.filter(e => e.isIntersecting);
+          if(visible.length === 0) return;
+          // chọn mục có intersectionRatio lớn nhất
+          let top = visible.reduce((a,b) => a.intersectionRatio > b.intersectionRatio ? a : b);
+          const id = top.target.id;
+          const link = mapLink.get(id);
+          if(!link) return;
+          sideLinks.forEach(l=>l.classList.remove('active'));
+          link.classList.add('active');
+  }, { root: null, rootMargin: '0px', threshold: [0.5,0.75,1] });
+        // bật observer cho từng section
         sections.forEach(s=> io.observe(s));
+
+        // khi click vào link: scroll mượt tới section, set active cho link và card ngay lập tức
+        sideLinks.forEach(a => a.addEventListener('click', (ev)=>{
+          ev.preventDefault();
+          const href = a.getAttribute('href');
+          const target = document.querySelector(href);
+          // cuộn mượt đến mục (nếu có)
+          if(target && target.scrollIntoView){
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+          // set active cho link
+          sideLinks.forEach(l=>l.classList.remove('active'));
+          a.classList.add('active');
+          //tạm thời để giữ trạng thái theo click
+          clickLock = true;
+          setTimeout(()=>{ clickLock = false }, LOCK_DURATION);
+          // set active cho card tương ứng (thêm class .active lên .card chứa section)
+          document.querySelectorAll('.card').forEach(c=> c.classList.remove('active'));
+          if(target){
+            const card = target.closest('.card');
+            if(card) card.classList.add('active');
+          }
+        }));
       }
     }catch(e){ console.warn('Active sidebar observer failed', e) }
   });
 
-// Lightbox: simple, accessible
+// Lightbox: đơn giản, thân thiện (truy cập)
 document.addEventListener('DOMContentLoaded', ()=>{
   const imgs = Array.from(document.querySelectorAll('.lightbox-img'));
   if(!imgs.length) return;
 
-  // create overlay
+  // tạo overlay cho lightbox
   const overlay = document.createElement('div');
   overlay.className = 'lightbox-overlay';
   overlay.innerHTML = '<img class="lightbox-img-view" alt="" />';
