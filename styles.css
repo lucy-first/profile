@@ -15,7 +15,7 @@ body{
 }
 
 .app-layout{ display:flex }
-.sidebar{ position:fixed; left:0; top:0; bottom:0; width:84px; background: rgba(255,255,255,0.02); border-right:1px solid rgba(255,255,255,0.03); padding-top:24px; z-index:30 }
+.sidebar{ position:fixed; left:0; top:0; bottom:0; width:84px; min-width:84px; background: rgba(255,255,255,0.02); border-right:1px solid rgba(255,255,255,0.03); padding-top:24px; z-index:30; flex-shrink:0 }
 .side-nav{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:6px; align-items:center }
 .side-link{ display:flex; flex-direction:column; align-items:center; gap:6px; padding:8px; color:var(--muted); text-decoration:none }
 .side-link svg{ width:22px; height:22px; fill:var(--muted) }
@@ -122,7 +122,8 @@ body{
   .cards-grid{ grid-template-columns: 1fr }
 }
 
-@media (max-width:520px){
+@media (max-width:520px) and (pointer:coarse){
+  /* Trên thiết bị cảm ứng nhỏ (mobile/tablet) ẩn sidebar và dùng overlay */
   .profile-card{padding:20px; border-radius:12px}
   .profile-name{font-size:1.4rem}
   .sidebar{ display:none }
@@ -132,7 +133,8 @@ body{
 /* Thanh bên trượt vào trên thiết bị di động */
 .sidebar{ transform: translateX(0); transition: transform .28s ease }
 .sidebar.open{ display:block; transform: translateX(0) }
-@media (max-width:520px){
+@media (max-width:520px) and (pointer:coarse){
+  /* Chỉ áp dụng kiểu overlay sidebar cho thiết bị cảm ứng nhỏ */
   .sidebar{ position:fixed; left:0; top:0; bottom:0; width:260px; transform: translateX(-110%); z-index:50; display:block }
   .sidebar.open{ transform: translateX(0) }
 }
