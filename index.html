@@ -38,111 +38,299 @@
       
 
       <main id="mainContent" class="vertical-profile" role="main">
-  <div class="profile-card">
-  <!-- Ảnh đại diện -->
+        <!-- Header Section -->
+        <div class="profile-header">
+          <div class="avatar-container">
   <img class="avatar" src="image/anh2.jpg" alt="Ảnh đại diện" loading="lazy">
+            <div class="avatar-glow"></div>
+          </div>
   <h1 class="profile-name">Nguyễn Ngọc Tùng</h1>
-
+          <p class="profile-title">Frontend Developer</p>
         <p class="profile-desc">Tôi thích xây dựng giao diện tinh tế, tối giản và trải nghiệm mượt mà. Tôi làm việc với HTML, CSS và JavaScript để biến ý tưởng thành sản phẩm.</p>
+        </div>
 
-  <!-- Các mục cá nhân hiển thị theo lưới responsive -->
-  <div class="cards-grid">
-    <div class="card featured">
-      <section id="personal-info" class="section personal-info">
-        <h2>Thông Tin Cá Nhân</h2>
-        <ul class="info-list">
-          <li><strong>Họ và tên:</strong> Nguyễn Ngọc Tùng</li>
-          <li><strong>Ngày sinh:</strong> 03/06/2005</li>
-          <li><strong>Trường:</strong> Đại học Giao Thông Vận Tải TP.HCM</li>
-          <li><strong>Ngành học:</strong> Công nghệ thông tin</li>
-        </ul>
-
-        <div class="image-grid" aria-hidden="false">
-          <!-- Ba ảnh phụ-->
-          <img class="lightbox-img" loading="lazy" src="image/anh1.jpg" alt="ảnh 1" />
-          <img class="lightbox-img" loading="lazy" src="image/anh3.jpg" alt="ảnh 2" />
-          <img class="lightbox-img" loading="lazy" src="image/anh4.jpg" alt="ảnh 3" />
+        <!-- Main Content Grid -->
+        <div class="content-grid">
+          <!-- Personal Info Card -->
+          <div class="card featured personal-card">
+            <div class="card-header">
+              <div class="card-image">
+                <img src="image/anh1.jpg" alt="Thông tin cá nhân" loading="lazy">
+              </div>
+              <h2 class="card-title">Thông Tin Cá Nhân</h2>
+            </div>
+            <section id="personal-info" class="section personal-info">
+              <div class="info-grid">
+                <div class="info-item">
+                  <div class="info-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                  </div>
+                  <div class="info-content">
+                    <h3>Họ và tên</h3>
+                    <p>Nguyễn Ngọc Tùng</p>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+                  </div>
+                  <div class="info-content">
+                    <h3>Ngày sinh</h3>
+                    <p>03/06/2005</p>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+                  </div>
+                  <div class="info-content">
+                    <h3>Trường học</h3>
+                    <p>Đại học Giao Thông Vận Tải TP.HCM</p>
+                  </div>
+                </div>
+                <div class="info-item">
+                  <div class="info-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  </div>
+                  <div class="info-content">
+                    <h3>Ngành học</h3>
+                    <p>Công nghệ thông tin</p>
+                  </div>
+                </div>
         </div>
 
         <div class="hobbies">
           <h3>Sở Thích</h3>
-          <ul class="hobby-list">
-            <li>
-              <svg class="hobby-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                <div class="hobby-grid">
+                  <div class="hobby-item">
+                    <svg class="hobby-icon" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
               <span>Làm việc nhóm</span>
-            </li>
-            <li>
-              <svg class="hobby-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 3H8c-1.1 0-2 .9-2 2v12l4-2 4 2V5c0-1.1-.9-2-2-2z"/></svg>
-              <span>Chơi các trò chơi thể thao</span>
-            </li>
-            <li>
-              <svg class="hobby-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2h12v2H6V2zm0 16h12v2H6v-2zM6 7h12v2H6V7zm0 5h12v2H6v-2z"/></svg>
-              <span>Đọc truyện và nghe nhạc</span>
-            </li>
-          </ul>
+                  </div>
+                  <div class="hobby-item">
+                    <svg class="hobby-icon" viewBox="0 0 24 24"><path d="M16 3H8c-1.1 0-2 .9-2 2v12l4-2 4 2V5c0-1.1-.9-2-2-2z"/></svg>
+                    <span>Thể thao</span>
+                  </div>
+                  <div class="hobby-item">
+                    <svg class="hobby-icon" viewBox="0 0 24 24"><path d="M6 2h12v2H6V2zm0 16h12v2H6v-2zM6 7h12v2H6V7zm0 5h12v2H6v-2z"/></svg>
+                    <span>Đọc sách & Nghe nhạc</span>
+                  </div>
+                </div>
         </div>
       </section>
     </div>
 
-    <div class="card">
+          <!-- Career Goals Card -->
+          <div class="card career-card">
+            <div class="card-header">
+              <div class="card-image">
+                <img src="image/anh2.jpg" alt="Mục tiêu nghề nghiệp" loading="lazy">
+              </div>
+              <h2 class="card-title">Mục Tiêu Nghề Nghiệp</h2>
+            </div>
       <section id="profession" class="section profession">
-        <h2>Mục Tiêu Nghề Nghiệp</h2>
-        <p>Nhà phát triển web chuyên Front-end, tập trung vào xây dựng giao diện người dùng tương tác, tối ưu hiệu năng và responsive.</p>
+              <div class="career-content">
+                <div class="career-icon">
+                  <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <div class="career-goals">
+                  <h3>Mục tiêu ngắn hạn (1-2 năm)</h3>
+                  <ul>
+                    <li>Thành thạo React.js và Vue.js</li>
+                    <li>Học thêm TypeScript và Node.js</li>
+                    <li>Xây dựng portfolio với 5+ dự án chất lượng</li>
+                  </ul>
+                  
+                  <h3>Mục tiêu dài hạn (3-5 năm)</h3>
+                  <ul>
+                    <li>Trở thành Senior Frontend Developer</li>
+                    <li>Tham gia các dự án lớn với quy mô enterprise</li>
+                    <li>Mentor cho các developer trẻ</li>
+                    <li>Phát triển kỹ năng leadership</li>
+                  </ul>
+                  
+                  <div class="career-values">
+                    <h3>Giá trị nghề nghiệp</h3>
+                    <p>Tôi tin vào việc tạo ra những sản phẩm có ý nghĩa, mang lại trải nghiệm tốt cho người dùng và đóng góp tích cực vào cộng đồng developer.</p>
+                  </div>
+                </div>
+              </div>
       </section>
     </div>
 
-    <div class="card">
+          <!-- Skills Card -->
+          <div class="card skills-card">
+            <div class="card-header">
+              <div class="card-image">
+                <img src="image/anh3.jpg" alt="Kỹ năng" loading="lazy">
+              </div>
+              <h2 class="card-title">Kỹ Năng & Ngôn Ngữ</h2>
+            </div>
       <section id="skills" class="section skills">
-        <h2>Ngôn Ngữ &amp; Kỹ Năng</h2>
-        <p>Ngôn ngữ: Tiếng Việt, Tiếng Anh</p>
-        <p>Kỹ năng: HTML, CSS, JavaScript, Git</p>
+              <div class="skills-content">
+                <div class="skill-category">
+                  <h3>Ngôn ngữ</h3>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Tiếng Việt (Bản ngữ)</span>
+                    <span class="skill-tag">Tiếng Anh </span>
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h3>Soft Skills</h3>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Làm việc nhóm</span>
+                    <span class="skill-tag">Giải quyết vấn đề</span>
+                    <span class="skill-tag">Tư duy logic</span>
+                    <span class="skill-tag">Sáng tạo</span>
+                    <span class="skill-tag">Học hỏi nhanh</span>
+                  </div>
+                </div>
+              </div>
       </section>
     </div>
 
-    <div class="card">
-      <section id="certs" class="section certs">
-        <h2>Chứng chỉ &amp; Giải thưởng</h2>
-        <p>Không có</p>
-      </section>
+          <!-- Certificates Card -->
+          <div class="card certs-card">
+            <div class="card-header">
+              <div class="card-image">
+                <img src="image/anh4.jpg" alt="Chứng chỉ" loading="lazy">
+              </div>
+              <h2 class="card-title">Chứng Chỉ & Giải Thưởng</h2>
+            </div>
+            <section id="certs" class="section certs">
+              <div class="certs-content">
+                <div class="cert-placeholder">
+                  <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <p>Không có</p>
+                </div>
+              </div>
+            </section>
     </div>
 
-    <div class="card">
+          <!-- Projects Card -->
+          <div class="card projects-card">
+            <div class="card-header">
+              <div class="card-image">
+                <img src="image/anh1.jpg" alt="Dự án" loading="lazy">
+              </div>
+              <h2 class="card-title">Dự Án</h2>
+            </div>
       <section class="section projects" id="projects">
-        <h2>Dự Án Đã Và Đang Làm</h2>
-        <ul class="project-list">
-          <li>
-            <strong>Website cá nhân</strong>
-            <p>Một trang tĩnh để giới thiệu bản thân và dự án mẫu.</p>
-          </li>
-          <li>
-            <strong>Ứng dụng diệt tác vụ</strong>
-            <p>Ứng dụng giúp tắt các ứng dụng chạy nền để giải phóng RAM.</p>
-          </li>
-        </ul>
+              <div class="projects-content">
+                <div class="project-item">
+                  <div class="project-icon">
+                    <svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+                  </div>
+                  <div class="project-info">
+                    <h3>Portfolio Website</h3>
+                    <p>Website cá nhân với thiết kế responsive, sử dụng HTML5, CSS3, JavaScript thuần</p>
+                    <div class="project-tech">
+                      <span class="tech-tag">HTML5</span>
+                      <span class="tech-tag">CSS3</span>
+                      <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                      <a href="#" class="project-link">Live Demo</a>
+                      <a href="#" class="project-link">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="project-item">
+                  <div class="project-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                  </div>
+                  <div class="project-info">
+                    <h3>Phần mềm diệt tác vụ</h3>
+                    <p>Ứng dụng giúp tắt các ứng dụng chạy nền để giải phóng RAM và tối ưu hiệu năng máy tính</p>
+                    <div class="project-tech">
+                      <span class="tech-tag">C#</span>
+                      <span class="tech-tag">.NET Framework</span>
+                      <span class="tech-tag">Windows API</span>
+                    </div>
+                    <div class="project-links">
+                      <a href="#" class="project-link">Live Demo</a>
+                      <a href="#" class="project-link">GitHub</a>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
       </section>
     </div>
 
-    <div class="card">
-      <section class="section contact" id="contact">
-        <h2>Liên hệ</h2>
-        <ul class="info-list">
-          <li><strong>Email:</strong> tungpro030605@gmail.com</li>
-          <li><strong>Số điện thoại:</strong> 0325884142</li>
-        </ul>
-        <div class="profile-actions">
-          <a class="btn" href="mailto:tungpro030605@gmail.com">Gửi email</a>
-        </div>
-        <!-- Liên kết mạng xã hội -->
-        <div class="social-links" aria-label="Mạng xã hội">
-          <a class="social-link" href="https://www.facebook.com/nguyen.tung.636153" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07c0 4.99 3.66 9.13 8.44 9.92v-7.03H7.9v-2.89h2.54V9.41c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.76-1.61 1.54v1.84h2.74l-.44 2.89h-2.3v7.03C18.34 21.2 22 17.06 22 12.07z"/></svg>
-          </a>
-          <a class="social-link" href="https://www.instagram.com/lucyfisrt/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.1A4.9 4.9 0 1 0 16.9 13 4.9 4.9 0 0 0 12 8.1zm6.5-.6a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1zM12 9.6A3.4 3.4 0 1 1 8.6 13 3.4 3.4 0 0 1 12 9.6z"/></svg>
-          </a>
-        </div>
-      </section>
-    </div>
+          <!-- Contact Card -->
+          <div class="card contact-card">
+            <div class="card-header">
+              <div class="card-image">
+                <img src="image/anh2.jpg" alt="Liên hệ" loading="lazy">
+              </div>
+              <h2 class="card-title">Liên Hệ</h2>
+            </div>
+            <section class="section contact" id="contact">
+              <div class="contact-content">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                  </div>
+                  <div class="contact-info">
+                    <h3>Email</h3>
+                    <p>tungpro030605@gmail.com</p>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                  </div>
+                  <div class="contact-info">
+                    <h3>Số điện thoại</h3>
+                    <p>0325884142</p>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                  </div>
+                  <div class="contact-info">
+                    <h3>Địa chỉ</h3>
+                    <p>TP. Hồ Chí Minh, Việt Nam</p>
+                  </div>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  </div>
+                  <div class="contact-info">
+                    <h3>GitHub</h3>
+                    <p>github.com/lucy-first</p>
+                  </div>
+                </div>
+                <div class="profile-actions">
+                  <a class="btn primary" href="mailto:tungpro030605@gmail.com">
+                    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    Gửi email
+                  </a>
+                  <a class="btn secondary" href="tel:0325884142">
+                    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    Gọi điện
+                  </a>
+                </div>
+                <div class="social-links" aria-label="Mạng xã hội">
+                  <a class="social-link" href="https://www.facebook.com/nguyen.tung.636153" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <svg viewBox="0 0 24 24"><path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07c0 4.99 3.66 9.13 8.44 9.92v-7.03H7.9v-2.89h2.54V9.41c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.76-1.61 1.54v1.84h2.74l-.44 2.89h-2.3v7.03C18.34 21.2 22 17.06 22 12.07z"/></svg>
+                  </a>
+                  <a class="social-link" href="https://www.instagram.com/lucyfisrt/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.1A4.9 4.9 0 1 0 16.9 13 4.9 4.9 0 0 0 12 8.1zm6.5-.6a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1zM12 9.6A3.4 3.4 0 1 1 8.6 13 3.4 3.4 0 0 1 12 9.6z"/></svg>
+                  </a>
+                  <a class="social-link" href="https://github.com/lucy-first" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                  </a>
+                  <a class="social-link" href="https://linkedin.com/in/nguyentung" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </section>
+          </div>
   </div>
     </main>
     <script src="script.js"></script>
